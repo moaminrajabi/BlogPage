@@ -4,7 +4,7 @@ import "../App.css";
 
 function NotFound() {
   return (
-    <div className="container">
+    <div className="container-NotFound">
       <div className="left">
         <img src="./assets/image/notFound.png" alt="" width="300px" />
       </div>
