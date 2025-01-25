@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/new-post" element={<NewPostPage />} />
