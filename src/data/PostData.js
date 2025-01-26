@@ -55,3 +55,34 @@ export const posts = [
     likes: 55,
   },
 ];
+
+export const getPosts = () => {
+  const storedPosts = localStorage.getItem("posts");
+  return storedPosts ? JSON.parse(storedPosts) : posts; // اگر Local Storage خالی باشد، از داده‌های پیش‌فرض استفاده کن
+};
+
+export const addNewPost = (newPost) => {
+  const currentPosts = getPosts(); // پست‌های فعلی
+  const updatedPosts = [
+    ...currentPosts,
+    {
+      ...newPost,
+      id: currentPosts.length + 1,
+      date: new Date().toISOString(),
+      likes: 10,
+      image: newPost.image,
+    },
+  ];
+
+  // ذخیره در Local Storage
+  localStorage.setItem("posts", JSON.stringify(updatedPosts));
+
+  // آپدیت کردن آرایه اصلی `posts`
+  posts.push({
+    ...newPost,
+    id: currentPosts.length + 1,
+    date: new Date().toISOString(),
+    likes: 10,
+    image: newPost.image,
+  });
+};

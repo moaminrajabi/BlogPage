@@ -1,9 +1,10 @@
 import React from "react";
-import { posts } from "../data/PostData";
+import { getPosts } from "../data/PostData";
 import PostCard from "../components/PostCard";
 import { Link } from "react-router-dom";
 
 function HomePage() {
+  const posts = getPosts();
   return (
     <div>
       <header>
