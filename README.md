@@ -1,8 +1,22 @@
 # React + Vite
+# Blog Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and responsive blog platform built using **React.js**, allowing users to upload, display, and manage posts. The project is designed for scalability and includes features like post previews, tags, and responsive layouts for different devices.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- **Post Upload:** Users can create and upload new blog posts.
+- **Post Display:** All posts are displayed in a clean and organized grid layout.
+- **Responsive Design:** Optimized for desktop, tablet, and mobile devices.
+- **Interactive UI:** Includes hover effects and modern styles.
+- **Scalable Structure:** Ready for additional features like user authentication and comments.
+
+---
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/blog-platform.git
