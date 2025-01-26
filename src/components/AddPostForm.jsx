@@ -1,52 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import "../App.css";
 
-function AddPostForm() {
+function AddPostForm({ onAddPost }) {
+  const [author, setAuthor] = useState("");
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [tags, setTags] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onAddPost({ title, description, tags: tags.split(",") });
+    setTitle("");
+    setDescription("");
+    setTags("");
+  };
   return (
     <div class="form-container">
-      <form>
+      <form onSubmit={handleSubmit}>
         <div class="form-group">
-          <label className="lable" for="firstName">
-            First Name
+          <label className="lable" for="author">
+            Author
           </label>
           <input
             className="inputAddForm"
             type="text"
             id="firstName"
-            placeholder="Enter your first name"
+            placeholder="Enter your name"
           />
         </div>
         <div class="form-group">
-          <label className="lable" for="lastName">
-            Last Name
+          <label className="lable" for="title">
+            Title
           </label>
           <input
             className="inputAddForm"
             type="text"
             id="lastName"
-            placeholder="Enter your last name"
+            placeholder="Enter your title"
           />
         </div>
         <div class="form-group">
-          <label className="lable" for="email">
-            Email
+          <label className="lable" for="description">
+            Description
           </label>
           <input
             className="inputAddForm"
             type="email"
             id="email"
-            placeholder="Enter your email"
+            placeholder="Enter your description"
           />
         </div>
         <div class="form-group">
           <label className="lable" for="password">
-            Password
+            Tags
           </label>
           <input
             className="inputAddForm"
             type="password"
             id="password"
-            placeholder="Enter your password"
+            placeholder="Enter your Tags"
           />
         </div>
         <button className="button" type="submit">

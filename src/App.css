@@ -173,3 +173,7 @@ strong:hover {
   outline: none;
   transition: border 0.3s ease;
 }
+.newPost {
+  margin-bottom: 10px;
+  margin-left: 40%;
+}
