@@ -1,5 +1,4 @@
 import React from "react";
-import { posts } from "../data/PostData";
 
 function PostCard({ title, description, author, tags, date, likes, image }) {
   return (
