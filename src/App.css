@@ -181,10 +181,10 @@ strong:hover {
   padding: 20px 30px;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  width: 40%;
+  width: 30%;
   max-width: 800px;
   position: relative;
-  left: 30%;
+  left: 35%;
   margin-bottom: 10px;
 }
 .NavBar ul {
@@ -196,14 +196,28 @@ strong:hover {
 .NavBar li {
   margin: 0rem 1rem;
   list-style: none;
+  cursor: pointer;
 }
 
 .Link {
   text-decoration: none;
   transition: 0.4s;
+  cursor: pointer;
 }
 .Linkactive {
   color: #4f46e5;
   text-decoration: none;
   transition: 0.3s;
+  cursor: pointer;
+}
+.title_about {
+  font-size: 48px;
+  color: #395ebb;
+}
+.desc_about {
+  font-size: 23px;
+  color: white;
+  margin-left: 9px;
+  margin-top: 20px;
+  line-height: 1.6rem;
 }

@@ -13,20 +13,13 @@ function NavBar() {
             Home
           </NavLink>
         </li>
+        <li></li>
         <li>
           <NavLink
             to="/about"
             className={({ isActive }) => (isActive ? "Linkactive" : "Link")}
           >
             About us
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) => (isActive ? "Linkactive" : "Link")}
-          >
-            Contact
           </NavLink>
         </li>
       </ul>
