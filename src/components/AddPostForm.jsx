@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { addNewPost } from "../data/PostData";
+import { useNavigate } from "react-router-dom";
 
 function AddPostForm() {
+  const navigate = useNavigate();
+
   const [author, setAuthor] = useState("");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -13,7 +16,7 @@ function AddPostForm() {
     const file = e.target.files[0];
     if (file) {
       setImage(file);
-      setPreview(URL.createObjectURL(file)); // ایجاد پیش‌نمایش تصویر
+      setPreview(URL.createObjectURL(file));
     }
   };
 
@@ -33,7 +36,6 @@ function AddPostForm() {
       image: preview,
     });
 
-    // ریست کردن فرم
     setAuthor("");
     setTitle("");
     setDescription("");
@@ -41,6 +43,8 @@ function AddPostForm() {
     setImage(null);
     setPreview(null);
     alert("Post added successfully!");
+
+    navigate("/");
   };
 
   return (

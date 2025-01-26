@@ -17,7 +17,7 @@ function PostCard({ title, description, author, tags, date, likes, image }) {
             By {author} on {date}
           </small>
         </p>
-        <p className="tow">{likes} ❤️</p>
+        <p className="tow"> {likes} ❤️</p>
       </div>
     </div>
   );

@@ -58,26 +58,24 @@ export const posts = [
 
 export const getPosts = () => {
   const storedPosts = localStorage.getItem("posts");
-  return storedPosts ? JSON.parse(storedPosts) : posts; // اگر Local Storage خالی باشد، از داده‌های پیش‌فرض استفاده کن
+  return storedPosts ? JSON.parse(storedPosts) : posts;
 };
 
 export const addNewPost = (newPost) => {
-  const currentPosts = getPosts(); // پست‌های فعلی
+  const currentPosts = getPosts();
   const updatedPosts = [
     ...currentPosts,
     {
       ...newPost,
       id: currentPosts.length + 1,
-      date: new Date().toISOString(),
-      likes: 10,
+      date: new Date().toLocaleString(),
+      likes: Math.floor(Math.random() * 100),
       image: newPost.image,
     },
   ];
 
-  // ذخیره در Local Storage
   localStorage.setItem("posts", JSON.stringify(updatedPosts));
 
-  // آپدیت کردن آرایه اصلی `posts`
   posts.push({
     ...newPost,
     id: currentPosts.length + 1,
