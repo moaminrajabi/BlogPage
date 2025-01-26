@@ -1,3 +1,4 @@
+/* Global Styles for the entire page */
 * {
   padding: 0%;
   margin: 0%;
@@ -6,20 +7,24 @@
   background-color: #0e1217;
   color: white;
 }
+
 .App {
   width: 80%;
   margin: 4% auto;
 }
+
 .title-error {
   margin-top: 5rem;
   font-size: 4rem;
   margin-bottom: 1rem;
 }
+
 .desc-error {
   font-size: 1.5rem;
   line-height: 2rem;
   margin-bottom: 8rem;
 }
+
 .Go-Home {
   text-decoration: none;
   margin-top: 8rem;
@@ -30,21 +35,25 @@
   font-weight: 600;
   transition: 0.4s;
 }
+
 .Go-Home:hover {
-  transition: 0.4s;
   background-color: #395ebb;
   border: 1px solid #395ebb;
   transition: 0.4s;
 }
+
 .container-NotFound {
   display: flex;
 }
+
 .left {
   width: 30%;
 }
+
 .right {
   width: 70%;
 }
+
 .Home {
   margin-top: 1rem;
   display: grid;
@@ -52,31 +61,36 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
+
 .post-card {
   padding: 1rem;
   border: 1.5px solid black;
   border-radius: 15px;
 }
+
 .post-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
 }
+
 .post-card h3 {
   margin-top: 0.4rem;
   font-size: 1.5rem;
   margin-bottom: 0.4rem;
 }
+
 .desc {
   font-size: 1rem;
   line-height: 1.5rem;
 }
+
 .tags {
   margin: 0.7rem 1px;
-  /* margin-left: -11px; */
   margin-bottom: 4rem;
 }
+
 span {
   background-color: darkgray;
   margin: 20px 6px;
@@ -85,21 +99,26 @@ span {
   font-size: 15px;
   color: black;
 }
+
 .info {
   display: flex;
   justify-content: start;
 }
+
 .one {
   width: 80%;
 }
+
 .tow {
   width: 20%;
 }
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .button {
   padding: 0.5rem 2rem;
   border-radius: 4rem;
@@ -111,11 +130,13 @@ header {
   font-family: sans-serif;
   transition: 0.5s;
 }
+
 .button:hover {
   background-color: #3a5da8;
   cursor: pointer;
   transition: 0.5s;
 }
+
 .input {
   border: 1px solid #4f46e5;
   border-radius: 4rem;
@@ -128,22 +149,25 @@ header {
 }
 
 .input:focus {
-  outline: none;
   border: 1px solid white;
 }
+
 label {
   font-size: 14px;
   margin-bottom: 6px;
   color: #eaeaea;
 }
+
 strong {
   padding: 3px 7px;
   background-color: #4f73d0;
   border-radius: 50%;
 }
+
 strong:hover {
   background-color: #3a5da8;
 }
+
 .form-container {
   padding: 20px 30px;
   border-radius: 12px;
@@ -153,16 +177,19 @@ strong:hover {
   position: relative;
   left: 13%;
 }
+
 .form-container button {
   position: relative;
   left: 40%;
   margin-top: 20px;
 }
+
 .form-group {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
 }
+
 .inputAddForm {
   border: 1px solid #4f46e5;
   border-radius: 8px;
@@ -173,10 +200,13 @@ strong:hover {
   outline: none;
   transition: border 0.3s ease;
 }
+
 .newPost {
   margin-bottom: 10px;
-  margin-left: 40%;
+  margin-left: 43.5%;
+  margin-top: 2rem;
 }
+
 .NavBar {
   padding: 20px 30px;
   border-radius: 12px;
@@ -187,6 +217,7 @@ strong:hover {
   left: 35%;
   margin-bottom: 10px;
 }
+
 .NavBar ul {
   display: flex;
   justify-content: center;
@@ -204,20 +235,114 @@ strong:hover {
   transition: 0.4s;
   cursor: pointer;
 }
+
 .Linkactive {
   color: #4f46e5;
   text-decoration: none;
   transition: 0.3s;
   cursor: pointer;
 }
+
+/* About page styling */
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
 .title_about {
-  font-size: 48px;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
   color: #395ebb;
 }
+
 .desc_about {
-  font-size: 23px;
+  font-size: 1.2rem;
+  line-height: 1.6;
   color: white;
-  margin-left: 9px;
-  margin-top: 20px;
-  line-height: 1.6rem;
+}
+
+/* Responsive design */
+
+/* For tablets (width below 768px) */
+@media (max-width: 768px) {
+  .Home {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .NavBar {
+    width: 80%;
+    left: 10%;
+  }
+
+  .form-container {
+    left: 5%;
+    width: 90%;
+  }
+
+  .button {
+    font-size: 14px;
+  }
+
+  .input {
+    width: 80%;
+  }
+
+  .title-about {
+    font-size: 2rem;
+  }
+
+  .desc-about {
+    font-size: 1rem;
+  }
+}
+
+/* For mobile devices (width below 480px) */
+@media (max-width: 480px) {
+  .Home {
+    grid-template-columns: repeat(1, 1fr); /* Each card takes up a full row */
+  }
+
+  .post-card {
+    padding: 0.3rem; /* Reduced padding for the card */
+    font-size: 0.9rem; /* Smaller font sizes */
+  }
+
+  .post-card img {
+    height: 150px; /* Reduced image height */
+  }
+
+  .NavBar {
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    left: 1%;
+  }
+
+  .form-container {
+    left: 2%;
+    width: 96%;
+  }
+
+  .button {
+    font-size: 12px;
+    padding: 9px 10px;
+  }
+
+  .input {
+    width: 40%;
+  }
+
+  .title-about {
+    font-size: 1.5rem;
+  }
+
+  .desc-about {
+    font-size: 0.9rem;
+  }
+
+  .newPost {
+    margin-left: 27%;
+  }
 }

@@ -13,7 +13,6 @@ function NavBar() {
             Home
           </NavLink>
         </li>
-        <li></li>
         <li>
           <NavLink
             to="/about"

@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   return (
-    <div>
+    <div className="about-container">
       <h1 className="title_about">Welcome to our platform</h1>
       <p className="desc_about">
         a space designed for connection and creativity! <br /> Here, you can
